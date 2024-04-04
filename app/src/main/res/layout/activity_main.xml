@@ -1,0 +1,101 @@
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <RadioGroup
+            android:id="@+id/num_circles_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp">
+
+            <RadioButton
+                android:id="@+id/radio_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:tag="2" />
+
+            <RadioButton
+                android:id="@+id/radio_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:tag="3" />
+
+            <RadioButton
+                android:id="@+id/radio_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:tag="4" />
+
+            <RadioButton
+                android:id="@+id/radio_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:tag="5" />
+
+            <RadioButton
+                android:id="@+id/radio_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:tag="6" />
+        </RadioGroup>
+
+        <!-- Botón para editar conjuntos -->
+        <Button
+            android:id="@+id/edit_sets_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/num_circles_radio_group"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Editar Sets" />
+
+        <!-- Botón para importar desde archivo -->
+        <Button
+            android:id="@+id/import_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Importar desde archivo"
+            android:layout_below="@id/edit_sets_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:onClick="importarDesdeArchivo" />
+
+        <!-- Botón para guardar diagrama -->
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/import_button"
+            android:layout_centerHorizontal="true"
+            android:text="Guardar Diagrama"
+            android:layout_marginTop="16dp"
+            android:onClick="onSaveButtonClick" />
+
+        <!-- Botón para guardar imagen -->
+        <Button
+            android:id="@+id/save_image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/save_button"
+            android:layout_centerHorizontal="true"
+            android:text="Guardar Imagen"
+            android:layout_marginTop="16dp"
+            android:onClick="onSaveImageButtonClick" />
+
+        <!-- Vista del diagrama de Venn -->
+        <upvictoria.pm_ene_abr_2024.iti_271164.pe1u3.VennDiagramView
+            android:id="@+id/venn_diagram_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/save_image_button"
+            android:layout_margin="16dp" />
+    </RelativeLayout>
